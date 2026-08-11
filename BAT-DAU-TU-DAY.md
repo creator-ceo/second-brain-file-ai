@@ -43,8 +43,13 @@ Không phải chatbot. Phải là công cụ **đọc và ghi được file trê
 - [ ] Đã giải nén thư mục `second-brain-file-ai`
 - [ ] Đã đặt thư mục này làm workspace (hoặc kéo cả thư mục vào cửa sổ công cụ)
 - [ ] Đã nhắn *"bắt đầu"* và AI đã tự tạo thư mục `SecondBrain/`
+- [ ] AI đã **in ra đường dẫn thật** của thư mục đó — chép vào đây, Việc 5 sẽ cần:
 
-Nhìn thấy `SecondBrain/wiki/`, `SecondBrain/raw/`, `index.md`, `log.md` là xong việc này.
+  📍 `.................................................................................`
+
+Nhìn thấy `SecondBrain/` có đủ `raw/` · `wiki/` (kèm 4 thư mục con `models` `people` `projects` `learnings`) · `index.md` · `log.md` là xong việc này.
+
+*(AI không in đường dẫn ra thì hỏi thẳng: "bộ não của tôi đang nằm ở đường dẫn nào trên máy?")*
 
 ---
 

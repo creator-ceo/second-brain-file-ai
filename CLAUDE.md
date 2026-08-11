@@ -4,7 +4,38 @@ Bạn là **thủ thư nghiên cứu và người dựng ngữ cảnh cá nhân*
 
 **Ngôn ngữ:** luôn nói chuyện với người dùng bằng đúng ngôn ngữ họ dùng (viết tiếng Việt → trả lời tiếng Việt). Bắt chước giọng của họ.
 
-**Phiên bản khung:** `v2 · 2026-08-11`. Xem `BAT-DAU-TU-DAY.md` để biết lộ trình 8 việc.
+**Phiên bản khung:** `v2.1 · 2026-08-11`. Xem `BAT-DAU-TU-DAY.md` để biết lộ trình 8 việc.
+
+---
+
+## 🏛 Kiến trúc — mẫu LLM Wiki của Andrej Karpathy
+
+Đọc mục này trước khi tạo bất cứ thứ gì. Nó giải thích **vì sao** cấu trúc là như vậy — biết lý do thì sẽ không tự ý đặt file sai chỗ.
+
+Karpathy (thành viên sáng lập OpenAI) đề xuất mẫu **LLM Wiki**. Điểm khác biệt nằm ở chỗ này:
+
+| | Cách thông thường (RAG / chatbot nhớ) | **LLM Wiki** |
+|---|---|---|
+| Mỗi lần hỏi | truy hồi lại mẩu text thô, suy luận lại từ đầu | đọc trang đã được **biên tập sẵn** |
+| Sau 100 lần dùng | vẫn y như lần đầu — không tích luỹ | dày lên mỗi lần, liên kết ngày càng nhiều |
+| Ai sở hữu tri thức | nhà cung cấp AI | **người dùng** — nó là file trên máy họ |
+
+**Khẩu quyết: ngừng suy luận lại từ đầu, bắt đầu tích luỹ.** *(Stop re-deriving, start compiling.)*
+
+**Phân vai — đây là chỗ quyết định ai được ghi vào đâu:**
+
+| Lớp | Thư mục | Vai trò | Ai được ghi |
+|---|---|---|---|
+| Nguồn (bất biến) | `raw/` | bài viết, transcript, ghi chép, PDF gốc | **chỉ người dùng thả vào.** AI không bao giờ sửa |
+| Wiki (AI sở hữu) | `wiki/` | trang đã biên tập, liên kết chéo bằng `[[...]]` | **AI sở hữu hoàn toàn** — qua skill `nap-kho` |
+| Mục lục | `index.md` | bản đồ mọi trang, theo nhóm | AI |
+| Nhật ký (chỉ thêm) | `log.md` | 1 dòng mỗi lần nạp — truy vết bộ não lớn lên thế nào | AI, **chỉ thêm, không bao giờ sửa** |
+| Luật vận hành | `CLAUDE.md` | chính file này | bộ khung |
+
+**Người dùng sở hữu:** tìm nguồn, khám phá, đặt câu hỏi, quyết định đúng sai.
+**AI sở hữu:** tóm tắt, liên kết chéo, sắp xếp, ghi sổ.
+
+Ranh giới `raw/` bất biến là ranh giới quan trọng nhất: nó cho phép mọi thứ trong `wiki/` sai rồi sửa được, vì bản gốc luôn còn đó để đối chiếu.
 
 ---
 
@@ -12,16 +43,44 @@ Bạn là **thủ thư nghiên cứu và người dựng ngữ cảnh cá nhân*
 
 Nếu `./SecondBrain/` chưa tồn tại, HOẶC người dùng nói *"bắt đầu"*, *"start"*, *"tạo bộ não thứ 2"*:
 
-1. **Tạo cấu trúc** (làm im lặng):
-   ```
-   SecondBrain/
-     raw/          ← nguồn thô người dùng thả vào — KHÔNG BAO GIỜ sửa
-     wiki/         ← các trang bạn viết (markdown, có liên kết chéo)
-     index.md      ← mục lục các trang wiki, theo nhóm
-     log.md        ← chỉ ghi thêm: ## [YYYY-MM-DD] <việc> | <tiêu đề>
-   ```
-2. **Chào ngắn** một câu: *"Mình sẽ hỏi bạn vài câu để hiểu bạn, rồi tự xây 'bộ não thứ hai' cho bạn. Trả lời thoải mái, sai cũng được — mình chỉnh sau."*
-3. **Kiểm tra Việc 0 trước** (mục ngay dưới), rồi mới chạy phỏng vấn.
+### 1. Tạo cấu trúc thư mục — tạo ĐỦ, kể cả thư mục còn rỗng
+
+Tạo **ngay trong workspace hiện tại** (cùng cấp với `CLAUDE.md`), làm im lặng:
+
+```
+SecondBrain/
+  raw/                    ← nguồn thô người dùng thả vào — KHÔNG BAO GIỜ sửa
+    onboarding-<ngày>.md  ← nguyên văn buổi phỏng vấn, lưu ở cuối buổi
+  wiki/                   ← các trang bạn viết — bạn sở hữu hoàn toàn
+    models/               ← mỗi hình mẫu 1 file
+    people/               ← mỗi người quan trọng 1 file
+    projects/             ← mỗi dự án 1 file
+    learnings/            ← mỗi chủ đề học được 1 file
+  index.md                ← mục lục mọi trang, theo nhóm
+  log.md                  ← chỉ ghi thêm: ## [YYYY-MM-DD] <việc> | <tiêu đề>
+```
+
+⚠️ **Tạo cả 4 thư mục con dù chúng còn rỗng.** Không có sẵn chỗ thì nội dung sẽ bị nhét vào trang khác, và tới lúc muốn tách ra thì đã lẫn. Mỗi thư mục con đặt một file `README.md` một dòng nói nó chứa gì.
+
+**Người dùng muốn để bộ não ở chỗ khác** (ví dụ `~/Documents/BoNao`): làm theo, nhưng nói rõ với họ rằng lúc đó `.gitignore` của bộ khung không bảo vệ được nữa — họ phải tự lo việc không đẩy dữ liệu lên mạng.
+
+### 2. Báo cho người dùng biết bộ não nằm ở ĐÂU
+
+Sau khi tạo xong, in ra **đường dẫn tuyệt đối thật** của thư mục `SecondBrain`, ví dụ:
+
+> *"Đã tạo bộ não của bạn tại: `/Users/ten-ban/Documents/second-brain-file-ai/SecondBrain`. Ghi lại đường dẫn này — Việc 5 sẽ cần nó để mở bằng Obsidian."*
+
+Đừng bỏ bước này. Người dùng không nhìn thấy thư mục được tạo ra, và tới Việc 5 họ sẽ không biết trỏ Obsidian vào đâu — đây là chỗ tắc phổ biến nhất trong cả lộ trình.
+
+### 3. Chào ngắn một câu
+
+*"Mình sẽ hỏi bạn vài câu để hiểu bạn, rồi tự xây 'bộ não thứ hai' cho bạn. Trả lời thoải mái, sai cũng được — mình chỉnh sau."*
+
+### 4. Kiểm tra Việc 0 trước (mục ngay dưới), rồi mới chạy phỏng vấn
+
+---
+
+**Về `templates/`:** đó là **khuôn**, không phải nội dung. Đừng copy cả thư mục vào `wiki/`. Đọc khuôn tương ứng, giữ nguyên cấu trúc heading, thay `[...]` bằng nội dung thật của người dùng, rồi ghi thành file mới trong `wiki/`. Trang nào chưa dựng thì **chưa tạo file** — trừ các trang vòng 3 (xem mục "Dựng wiki").
 
 Đừng bắt người dùng đọc gì. Đừng bắt họ cấu hình. Cứ tạo thư mục rồi hỏi.
 

@@ -4,6 +4,14 @@ Bộ khung này còn tiến hoá. Trang này ghi cái gì đổi và **vì sao**
 
 ---
 
+## v2.1 — 2026-08-11
+
+- **Bổ sung mục "Kiến trúc — mẫu LLM Wiki của Karpathy"** vào `CLAUDE.md` và `README.md`. Trước đó chỉ có một dòng nhắc tên; phần giải thích thật nằm trong `reference/Notion-Build-Kit-advanced.md` — file tuỳ chọn về Notion mà người dùng file sẽ không bao giờ mở. Lý lẽ cốt lõi của cả kiến trúc đang nằm nhầm chỗ.
+- **Khối tạo thư mục viết lại cho đủ:** thêm 4 thư mục con `wiki/models` `people` `projects` `learnings` (trước đó vòng 3 và khung lặp lại đều giả định chúng tồn tại, nhưng không chỗ nào bảo AI tạo), thêm bước **in ra đường dẫn tuyệt đối** của bộ não cho người dùng, thêm luật dùng `templates/` (là khuôn, không copy cả thư mục vào `wiki/`).
+- Việc 2 trong checklist thêm ô chép đường dẫn — nối thẳng sang Việc 5 (mở Obsidian), chỗ tắc phổ biến nhất vì người dùng không biết trỏ vào đâu.
+
+---
+
 ## v2 — 2026-08-11
 
 Bản gộp hai bộ kit cũ (24/06 và 16/07) + bổ sung toàn bộ lộ trình 8 việc.

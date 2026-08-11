@@ -4,7 +4,7 @@
 
 Ném thư mục này vào một công cụ AI bậc 2, nhắn *"bắt đầu"*, trả lời phỏng vấn — bạn có một bộ não thứ 2 chạy được thật trong 5–10 tiếng.
 
-> **Phiên bản:** `v2` · 2026-08-11 — xem [CHANGELOG.md](CHANGELOG.md)
+> **Phiên bản:** `v2.1` · 2026-08-11 — xem [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
@@ -41,6 +41,34 @@ Chưa quen `git` thì tải bản `.zip`, giải nén là dùng được ngay. �
 AI tự tạo `SecondBrain/` rồi phỏng vấn bạn từng câu.
 
 📍 **Toàn bộ lộ trình 8 việc:** [BAT-DAU-TU-DAY.md](BAT-DAU-TU-DAY.md) — tick từng ô, vừa là bản đồ vừa là bằng chứng.
+
+---
+
+## Bộ não của bạn trông như thế nào
+
+AI sẽ tạo ra một thư mục `SecondBrain/` ngay cạnh các file này:
+
+```
+SecondBrain/
+  raw/          nguồn gốc — bài viết cũ, transcript, ghi chép bạn thả vào
+                ⛔ AI KHÔNG BAO GIỜ được sửa thư mục này
+  wiki/         các trang AI viết ra, nối nhau bằng [[liên kết]]
+    models/     hình mẫu bạn đang học
+    people/     người quan trọng
+    projects/   dự án
+    learnings/  thứ học được từ sách/khoá/người khác
+  index.md      mục lục
+  log.md        nhật ký — mỗi lần nạp một dòng, chỉ thêm không xoá
+```
+
+Đây là mẫu **LLM Wiki** của Andrej Karpathy (thành viên sáng lập OpenAI). Khác biệt nằm ở một chỗ:
+
+> Chatbot thông thường **suy luận lại từ đầu** mỗi lần bạn hỏi — dùng 100 lần vẫn y như lần đầu.
+> Bộ não thứ 2 thì **biên tập** những gì bạn đưa vào thành các trang dày, liên kết chéo. Mỗi lần dùng là một lần nó dày thêm.
+>
+> **Ngừng suy luận lại từ đầu, bắt đầu tích luỹ.**
+
+Khung này đã được thiết kế sẵn — bạn **không cần tự nghĩ ra cấu trúc**, chỉ cần trả lời câu hỏi. Và vì nó là file markdown thuần trên máy bạn, nó là **của bạn**: đổi công cụ AI, đổi máy, hay ngừng trả phí đều không mất.
 
 ---
 
