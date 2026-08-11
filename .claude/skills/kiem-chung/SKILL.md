@@ -34,6 +34,21 @@ Các bước:
 
 ---
 
+## Câu 0 — hỏi TRƯỚC, để biết trượt là lỗi gì
+
+> *"Đọc file `SecondBrain/wiki/goals.md` và cho tôi biết dòng đầu tiên của nó."*
+
+Câu này không kiểm nội dung bộ não. Nó kiểm **công cụ có đọc được thư mục không** — và nó chia toàn bộ bài test thành hai nhánh chữa hoàn toàn khác nhau:
+
+| Câu 0 | Nghĩa là | Mọi câu trượt sau đó là |
+|---|---|---|
+| ✅ đọc được | công cụ chạy tốt, file có thật trên đĩa | **lỗi NỘI DUNG** — trang chưa điền đủ. Ngồi điền tiếp, đừng đụng vào cài đặt |
+| ❌ không đọc được | công cụ chưa thấy thư mục, hoặc file chưa từng được ghi ra | **lỗi CÔNG CỤ** — dừng bài test, đi sửa cài đặt trước |
+
+⚠️ **Đừng bỏ câu này.** Không có nó, một bộ não lưu tốt nhưng mới điền được 2 trang sẽ ra điểm thấp giống hệt một bộ não chưa lưu được gì — hai vấn đề ngược nhau, hai cách chữa ngược nhau. Người gặp cảnh đó thường là người mới làm dở dang, tức người ít khả năng tự phân biệt nhất, và họ sẽ mất cả buổi đi sửa thứ không hỏng.
+
+---
+
 ## 5 câu hỏi kiểm chứng
 
 Hỏi **từng câu một**, không gộp. Sau mỗi câu, tự chấm đạt/không đạt trước khi đi tiếp.
@@ -90,11 +105,23 @@ Tự chọn một chi tiết **cụ thể, không đoán được từ ngoài**.
 
 ## Chấm kết quả
 
+**Đọc bảng này theo Câu 0 trước, rồi mới đếm điểm.**
+
+### Nhánh A — Câu 0 ✅ (công cụ chạy tốt)
+
 | Số câu đạt | Kết luận | Làm gì tiếp |
 |---|---|---|
 | **5/5** | Bộ não đã lưu thật, chạy được | Sang Việc 7 |
-| **3–4/5** | Có lưu, nhưng thiếu trang hoặc trang chưa đủ nội dung | Xem câu nào trượt → mở đúng trang tương ứng → bổ sung → chạy lại **từ đầu, trên phiên mới** |
-| **0–2/5** | Bộ não chưa lưu được, hoặc AI không đọc được thư mục | Kiểm tra: thư mục `SecondBrain/wiki/` có file thật không? Công cụ đã được trỏ đúng thư mục chưa? Nếu file có mà AI không đọc → lỗi cắm ngữ cảnh, không phải lỗi nội dung |
+| **3–4/5** | Có lưu, thiếu nội dung ở vài trang | Xem câu nào trượt → mở đúng trang tương ứng → bổ sung → chạy lại **từ đầu, trên phiên mới** |
+| **0–2/5** | ⚠️ **Không phải bộ não hỏng — là bạn mới điền được rất ít.** Đây là chuyện bình thường của người vừa bắt đầu | Quay lại **Việc 4**, điền cho đủ 11 trang neo. **Đừng đụng vào cài đặt, công cụ không hỏng** — Câu 0 vừa chứng minh điều đó |
+
+### Nhánh B — Câu 0 ❌ (công cụ chưa đọc được)
+
+Dừng bài test, **không cần hỏi 5 câu kia** — chúng sẽ trượt hết vì cùng một nguyên nhân. Kiểm theo thứ tự:
+
+1. Thư mục `SecondBrain/wiki/` có file `.md` thật không? *(mở bằng trình quản lý file, nhìn bằng mắt)*
+2. Có file mà AI không đọc được → **lỗi cắm ngữ cảnh**: workspace đang trỏ sai thư mục.
+3. Không có file nào → bộ não **chưa bao giờ được ghi ra đĩa**. Đây mới đúng là cái bẫy mà bài test này sinh ra để bắt: buổi phỏng vấn hôm trước chỉ nằm trong trí nhớ đoạn chat. Quay lại **Việc 2 và Việc 3**, làm lại trên công cụ bậc 2.
 
 **Trượt câu nào thì trang nào phải sửa:**
 

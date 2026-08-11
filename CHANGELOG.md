@@ -4,6 +4,18 @@ Bộ khung này còn tiến hoá. Trang này ghi cái gì đổi và **vì sao**
 
 ---
 
+## v2.2 — 2026-08-11
+
+Sửa 5 lỗi tìm ra khi **chạy thử trọn lộ trình 8 việc trên một bản clone sạch** — đóng vai member từ đầu tới cuối.
+
+- 🔴 **Việc 6 chẩn đoán sai.** Bảng chấm cũ kết luận điểm thấp = *"bộ não chưa lưu được"*, hướng người dùng đi sửa cài đặt. Nhưng bộ não lưu tốt mà mới điền được vài trang cũng ra điểm thấp y hệt — hai vấn đề ngược nhau, hai cách chữa ngược nhau. Thêm **Câu 0** hỏi trước (*"đọc file goals.md, cho tôi biết dòng đầu"*) để tách hẳn hai nhánh: đọc được = lỗi nội dung, đi điền tiếp; không đọc được = lỗi công cụ, dừng test. Lỗi này nhắm đúng vào người làm dở dang, tức người ít khả năng tự gỡ nhất.
+- **Thêm khuôn `templates/index.md` và `templates/log.md`.** Hai file ở gốc bộ não, được Luật sắt nhắc tới nhưng không có khuôn nào — mỗi người ra một định dạng, và `nap-kho` về sau ghi thêm vào cấu trúc không tồn tại.
+- **Vòng 3 vẫn phải thay `[Tên bạn]` ở tiêu đề.** Câu *"tạo file rỗng, KHÔNG bắt điền"* bị hiểu thành không đụng gì cả, nên 5 trang vào bộ não với placeholder ngay dòng đầu.
+- Cây thư mục ghi rõ `raw/` còn rỗng lúc tạo, file onboarding lưu vào ở **cuối** buổi.
+- Nói rõ `index.md` và `log.md` **không tạo rỗng**.
+
+---
+
 ## v2.1 — 2026-08-11
 
 - **Bổ sung mục "Kiến trúc — mẫu LLM Wiki của Karpathy"** vào `CLAUDE.md` và `README.md`. Trước đó chỉ có một dòng nhắc tên; phần giải thích thật nằm trong `reference/Notion-Build-Kit-advanced.md` — file tuỳ chọn về Notion mà người dùng file sẽ không bao giờ mở. Lý lẽ cốt lõi của cả kiến trúc đang nằm nhầm chỗ.

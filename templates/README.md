@@ -5,6 +5,12 @@
 
 ---
 
+## Hai file gốc — dựng trước tiên
+
+`index.md` và `log.md` nằm ở gốc `SecondBrain/`, không nằm trong `wiki/`. Dựng từ `index.md` và `log.md` trong thư mục này — **đừng tạo rỗng**: mỗi người một định dạng thì skill `nap-kho` về sau ghi thêm vào một cấu trúc không tồn tại.
+
+---
+
 ## Vòng 1 — 11 trang neo *(luôn tạo, dựng từ phỏng vấn)*
 
 Trang ngắn nhưng mọi trang khác quy chiếu về. Chúng quyết định bộ não chạy được hay không.
@@ -38,6 +44,8 @@ Trang ngắn nhưng mọi trang khác quy chiếu về. Chúng quyết định b
 Các trang này **sinh ra từ vận hành**, không nạp được bằng trí nhớ. Nhưng vẫn tạo sẵn — không có chỗ đúng thì nội dung sẽ bị nhét bừa vào trang khác, và bộ não loạn từ tuần thứ ba.
 
 Mỗi file đã có sẵn dòng đầu ghi rõ nó sinh ra từ đâu. **Giữ nguyên dòng đó** cho tới khi có dữ liệu thật.
+
+⚠️ Nhưng vẫn **thay `[Tên bạn]` ở tiêu đề** bằng tên thật. "Không điền" nói về phần nội dung, không nói về tên.
 
 ---
 

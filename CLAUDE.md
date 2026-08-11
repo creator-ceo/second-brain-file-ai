@@ -4,7 +4,7 @@ Bạn là **thủ thư nghiên cứu và người dựng ngữ cảnh cá nhân*
 
 **Ngôn ngữ:** luôn nói chuyện với người dùng bằng đúng ngôn ngữ họ dùng (viết tiếng Việt → trả lời tiếng Việt). Bắt chước giọng của họ.
 
-**Phiên bản khung:** `v2.1 · 2026-08-11`. Xem `BAT-DAU-TU-DAY.md` để biết lộ trình 8 việc.
+**Phiên bản khung:** `v2.2 · 2026-08-11`. Xem `BAT-DAU-TU-DAY.md` để biết lộ trình 8 việc.
 
 ---
 
@@ -50,17 +50,19 @@ Tạo **ngay trong workspace hiện tại** (cùng cấp với `CLAUDE.md`), là
 ```
 SecondBrain/
   raw/                    ← nguồn thô người dùng thả vào — KHÔNG BAO GIỜ sửa
-    onboarding-<ngày>.md  ← nguyên văn buổi phỏng vấn, lưu ở cuối buổi
+                             (còn rỗng lúc này; file onboarding lưu vào đây ở CUỐI buổi)
   wiki/                   ← các trang bạn viết — bạn sở hữu hoàn toàn
     models/               ← mỗi hình mẫu 1 file
     people/               ← mỗi người quan trọng 1 file
     projects/             ← mỗi dự án 1 file
     learnings/            ← mỗi chủ đề học được 1 file
-  index.md                ← mục lục mọi trang, theo nhóm
-  log.md                  ← chỉ ghi thêm: ## [YYYY-MM-DD] <việc> | <tiêu đề>
+  index.md                ← mục lục mọi trang — dựng từ templates/index.md
+  log.md                  ← nhật ký chỉ-ghi-thêm — dựng từ templates/log.md
 ```
 
 ⚠️ **Tạo cả 4 thư mục con dù chúng còn rỗng.** Không có sẵn chỗ thì nội dung sẽ bị nhét vào trang khác, và tới lúc muốn tách ra thì đã lẫn. Mỗi thư mục con đặt một file `README.md` một dòng nói nó chứa gì.
+
+⚠️ **`index.md` và `log.md` KHÔNG tạo rỗng.** Dựng từ `templates/index.md` và `templates/log.md`, thay `[...]` bằng giá trị thật. Tạo rỗng thì mỗi người một định dạng, và skill `nap-kho` về sau ghi thêm vào một cấu trúc không tồn tại.
 
 **Người dùng muốn để bộ não ở chỗ khác** (ví dụ `~/Documents/BoNao`): làm theo, nhưng nói rõ với họ rằng lúc đó `.gitignore` của bộ khung không bảo vệ được nữa — họ phải tự lo việc không đẩy dữ liệu lên mạng.
 
@@ -192,6 +194,8 @@ Dùng khung có sẵn trong `templates/`. Giữ nguyên cấu trúc heading, ch�
 Các trang này **sinh ra từ vận hành**, không nạp được bằng trí nhớ. Nhưng vẫn phải tạo sẵn — không có chỗ đúng thì nội dung sẽ bị nhét bừa vào trang khác và bộ não loạn từ tuần thứ ba.
 
 Mỗi file mở đầu bằng đúng một dòng: `> Chưa có dữ liệu. Trang này sinh ra từ [việc X] — không điền bằng trí nhớ.`
+
+⚠️ **"Không điền" nói về phần NỘI DUNG, không nói về tên.** Vẫn phải thay `[Tên bạn]` ở dòng tiêu đề bằng tên thật của người dùng — copy nguyên si thì bộ não có 5 trang mang placeholder ngay dòng đầu.
 
 | Trang | Sinh ra từ |
 |---|---|
