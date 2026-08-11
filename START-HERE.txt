@@ -1,0 +1,49 @@
+SECOND BRAIN — bắt đầu thế nào (2 bước, 1 phút)
+
+1) Mở công cụ AI bậc 2 — Claude Cowork, Claude Code, hoặc AntiGravity.
+   Đặt FOLDER này làm workspace của bạn
+   — hoặc giải nén rồi kéo cả folder vào cửa sổ công cụ.
+
+   (Chatbot thường như ChatGPT web KHÔNG dùng được — nó không ghi được
+    file ra máy bạn, mà bộ não thứ 2 chính là các file trên máy bạn.
+    Chưa biết cài: mở reference/huong-dan-cai-dat.md)
+
+2) Nhắn: "bắt đầu"
+
+Xong. AI sẽ tự tạo cấu trúc và hỏi bạn từng câu để dựng bộ não thứ 2.
+Trả lời thoải mái, sai cũng được — sửa sau.
+
+
+TOÀN BỘ LỘ TRÌNH: mở BAT-DAU-TU-DAY.md
+   8 việc, 5-10 tiếng, chia được ra nhiều buổi.
+   Tick từng ô khi xong — file đó vừa là bản đồ vừa là bằng chứng.
+
+
+VIỆC ĐẦU TIÊN (làm trước cả bước 1 ở trên nếu bạn muốn làm đúng thứ tự):
+   Bánh Xe Cuộc Đời + kế hoạch dài hạn / ngắn hạn.
+   Gõ: /banh-xe-cuoc-doi
+   Lý do: phần còn lại nạp dữ liệu VIỆC. Việc này nạp CON NGƯỜI.
+   Bỏ qua thì bộ não sẽ nạp rất nhanh một mục tiêu mà chính bạn
+   chưa tự kiểm lại xem có thật là mục tiêu của mình không.
+
+
+ĐỪNG BỎ VIỆC 6 — bài test kiểm chứng.
+   Gõ: /kiem-chung  (nhớ mở ĐOẠN CHAT MỚI, PROJECT MỚI)
+   Nó bắt đúng cái bẫy phổ biến nhất: tưởng đã lưu vào bộ não,
+   thật ra chỉ nằm trong trí nhớ của đoạn chat — hết phiên là mất.
+   Hai trường hợp đó trông giống hệt nhau, chỉ bài test này phân biệt được.
+
+
+SAU NÀY DÙNG HẰNG NGÀY:
+   /nap-kho     — nạp chuyện mới, insight mới, tài liệu mới vào bộ não
+                  (đây là đường ghi DUY NHẤT — đừng sửa tay file .md)
+   /kiem-chung  — chạy lại sau mỗi lần nạp một khối dữ liệu lớn
+   Hoặc chỉ cần hỏi: "brain của tôi biết gì về ..."
+
+
+TRƯỚC KHI NẠP DỮ LIỆU KHÁCH HÀNG:
+   Đọc reference/luat-du-lieu-nhay-cam.md (3 phút).
+   Bộ não này sắp chứa tên khách thật, số tiền thật, chuyện của người khác.
+
+
+Phiên bản khung: v2 - 2026-08-11
