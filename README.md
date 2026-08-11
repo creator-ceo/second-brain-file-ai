@@ -15,7 +15,7 @@ Ném thư mục này vào một công cụ AI bậc 2, nhắn *"bắt đầu"*, 
 Bộ khung này còn tiến hoá. Clone thì sau này gõ một lệnh là có bản mới nhất.
 
 ```bash
-git clone <ĐỊA-CHỈ-REPO> second-brain-file-ai
+git clone https://github.com/tohaidoanfake-afk/second-brain-file-ai.git
 cd second-brain-file-ai
 ```
 
