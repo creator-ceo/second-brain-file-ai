@@ -33,6 +33,19 @@ Bộ não thứ 2 là **một thư mục file trên máy bạn**. Chatbot không
 
 Ba dòng lệnh **y hệt** trên Windows, gõ trong **PowerShell** (bấm Start, gõ "PowerShell"). Nhưng bốn chỗ sau hay vấp:
 
+**0. Dùng PowerShell, đừng dùng Command Prompt (CMD)**
+
+Cách phân biệt: nhìn đầu dòng lệnh — `PS C:\...` là PowerShell, chỉ `C:\...` là CMD.
+
+| | PowerShell | CMD |
+|---|---|---|
+| Chạy được lệnh cài đặt | ✅ | ❌ — `irm`/`iex` là lệnh riêng của PowerShell |
+| Chạy được `claude` | ✅ | ⚠️ chạy được nhưng Claude Code **sẽ có lúc yêu cầu bạn chuyển sang PowerShell** |
+| Nối lệnh bằng `&&` | ✅ | ❌ không hỗ trợ |
+| Shift+Enter để xuống dòng khi gõ câu dài | ✅ *(trong Windows Terminal)* | ❌ |
+
+**Tốt nhất:** cài **Windows Terminal** (miễn phí ở Microsoft Store) rồi mở PowerShell trong đó. Không có cũng không sao — bấm Start gõ "PowerShell" là đủ dùng.
+
 **1. Cài Claude Code — dùng bản chạy thẳng, không cần WSL**
 
 Mở PowerShell, dán:

@@ -7,6 +7,7 @@ Bộ khung này còn tiến hoá. Trang này ghi cái gì đổi và **vì sao**
 ## v2.5 — 2026-08-14
 
 - **Thêm mục hướng dẫn cho máy Windows.** Toàn bộ tài liệu trước đó viết theo góc nhìn Mac (*"mở Terminal"*), trong khi phần lớn member nhiều khả năng dùng Windows. Bốn chỗ hay vấp nay có sẵn cách chữa: lệnh `claude` báo *not recognized* (phải mở lại PowerShell, không phải cài hỏng) · chưa có Git · đường dẫn có dấu cách cần nháy kép · thư mục ẩn `.claude` không thấy trong File Explorer.
+- **Nói rõ dùng PowerShell chứ không dùng CMD**, kèm cách phân biệt (`PS C:\...` vs `C:\...`) và bảng ba khác biệt. Lệnh cài đặt không chạy được trong CMD; và ngay cả khi `claude` chạy được, Claude Code sẽ có lúc yêu cầu chuyển sang PowerShell giữa chừng.
 - Ghi rõ Claude Code có bản chạy thẳng trên Windows, **không cần WSL và không cần Node.js** — hai thứ này là yêu cầu của cách cài cũ và vẫn còn trong nhiều hướng dẫn trên mạng, đủ để làm người mới bỏ cuộc ngay bước đầu.
 
 ---
