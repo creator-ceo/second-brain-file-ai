@@ -29,6 +29,37 @@ Bộ não thứ 2 là **một thư mục file trên máy bạn**. Chatbot không
 
 **Bắt buộc có gói trả phí.** Bản miễn phí hết lượt giữa buổi phỏng vấn là mất mạch, và bạn sẽ phải làm lại.
 
+### 🪟 Máy Windows — bốn chỗ khác Mac
+
+Ba dòng lệnh **y hệt** trên Windows, gõ trong **PowerShell** (bấm Start, gõ "PowerShell"). Nhưng bốn chỗ sau hay vấp:
+
+**1. Cài Claude Code — dùng bản chạy thẳng, không cần WSL**
+
+Mở PowerShell, dán:
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+Yêu cầu: Windows 10 (bản 1809 trở lên) hoặc Windows 11, tối thiểu 4 GB RAM. **Không cần cài Node.js, không cần WSL** — đó là yêu cầu của cách cài cũ.
+
+**2. Gõ `claude` mà báo "not recognized" → đóng PowerShell, mở lại**
+
+Đây là lỗi phổ biến nhất trên Windows. Cài xong, cửa sổ PowerShell đang mở **chưa biết** lệnh mới — phải đóng hẳn rồi mở cửa sổ mới. Không phải cài hỏng.
+
+**3. Gõ `git` mà báo không nhận → chưa có Git**
+
+Tải Git for Windows ở `git-scm.com`, cài bằng cách bấm Next hết. Hoặc bỏ qua git luôn, dùng đường tải file zip — không cần git chút nào.
+
+**4. Đường dẫn có dấu cách thì phải có nháy kép**
+
+```powershell
+cd "C:\Users\Ten Ban\Documents\second-brain-file-ai"
+```
+Thiếu nháy kép là báo lỗi ngay. Cách tránh: để thư mục ở chỗ không có dấu cách, ví dụ `C:\second-brain-file-ai`.
+
+**Kiểm sau khi giải nén zip:** mở thư mục, phải thấy `CLAUDE.md`, `templates`, và **`.claude`**. Không thấy `.claude` thì bật *View → Hidden items* trong File Explorer. Thiếu thư mục đó là mất cả 4 lệnh.
+
+---
+
 ### Kẹt thì làm gì
 
 Nhắn vào nhóm kèm **ảnh chụp màn hình chỗ kẹt**. Đây là việc duy nhất trong 8 việc có người gỡ hộ — 7 việc còn lại là việc của riêng bạn, không ai làm thay được.

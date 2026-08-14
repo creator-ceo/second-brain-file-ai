@@ -4,7 +4,7 @@
 
 Ném thư mục này vào một công cụ AI bậc 2, nhắn *"bắt đầu"*, trả lời phỏng vấn — bạn có một bộ não thứ 2 chạy được thật trong 5–10 tiếng.
 
-> **Phiên bản:** `v2.4` · 2026-08-14 — xem [CHANGELOG.md](CHANGELOG.md)
+> **Phiên bản:** `v2.5` · 2026-08-14 — xem [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
@@ -57,6 +57,8 @@ Ba dòng, theo đúng thứ tự. Dòng `cd` là dòng quan trọng nhất — t
 *(Nếu bạn nhờ AI clone hộ: clone xong phải **thoát ra, `cd` vào thư mục vừa tạo, mở lại** ở đó. Clone trong cùng một phiên rồi nhắn tiếp thì phiên đó vẫn chưa nạp `CLAUDE.md`.)*
 
 **Claude Cowork / AntiGravity:** kéo cả thư mục `second-brain-file-ai` vào cửa sổ, hoặc chọn nó làm workspace — không chọn thư mục cha chứa nó.
+
+**🪟 Máy Windows:** ba dòng lệnh y hệt, gõ trong **PowerShell**. Claude Code có bản chạy thẳng trên Windows, **không cần WSL** — cài bằng `irm https://claude.ai/install.ps1 | iex`. Bốn chỗ hay vấp (lệnh `claude` không nhận, chưa có git, đường dẫn có dấu cách, thư mục ẩn `.claude`) đã ghi ở [`reference/huong-dan-cai-dat.md`](reference/huong-dan-cai-dat.md).
 
 **Codex CLI:**
 ```bash
