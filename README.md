@@ -4,7 +4,7 @@
 
 Ném thư mục này vào một công cụ AI bậc 2, nhắn *"bắt đầu"*, trả lời phỏng vấn — bạn có một bộ não thứ 2 chạy được thật trong 5–10 tiếng.
 
-> **Phiên bản:** `v2.3` · 2026-08-11 — xem [CHANGELOG.md](CHANGELOG.md)
+> **Phiên bản:** `v2.4` · 2026-08-14 — xem [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
@@ -158,9 +158,37 @@ Mất 3 phút. Bộ não này sắp chứa tên người thật và chuyện c�
 
 ## Cập nhật bộ khung mà không mất bộ não
 
-`git pull` chỉ động vào các file khung (`CLAUDE.md`, `templates/`, `.claude/skills/`). Thư mục `SecondBrain/` của bạn nằm ngoài git nên không bị đụng tới.
+Bộ khung này còn tiến hoá — xem [CHANGELOG.md](CHANGELOG.md) để biết bản mới đổi gì.
 
-Nếu bạn có sửa file khung và `git pull` báo xung đột: giữ bản của bạn hoặc lấy bản mới đều được — **không có gì trong bộ não của bạn bị ảnh hưởng**.
+Điểm mấu chốt: **`SecondBrain/` hoàn toàn tách rời khỏi file khung.** Nên cập nhật = thay cái khung, bê bộ não sang. Không bao giờ phải trộn hai thứ.
+
+### Nếu bạn cài bằng `git clone`
+
+```bash
+cd second-brain-file-ai
+git pull
+```
+
+`.gitignore` chặn `SecondBrain/`, nên `git pull` **không đụng được** vào dữ liệu của bạn dù có muốn. Nếu bạn từng sửa file khung và `git pull` báo xung đột: giữ bản của bạn hay lấy bản mới đều được — bộ não không bị ảnh hưởng.
+
+### Nếu bạn cài bằng file zip
+
+1. Tải bản mới → giải nén → được thư mục `second-brain-file-ai` **mới**
+2. Mở thư mục **cũ**, kéo nguyên thư mục **`SecondBrain`** sang thư mục **mới**
+3. Xoá thư mục cũ, mở công cụ AI trong thư mục mới
+
+Kéo một lần là xong. Bộ não của bạn là một thư mục khép kín — không có file nào của nó nằm lẫn ngoài.
+
+### ⛔ Đừng nhờ AI "tự đọc bản mới rồi bổ sung phần còn thiếu"
+
+Nghe tiện, nhưng câu đó mơ hồ giữa hai thứ khác hẳn nhau: thiếu **file khung**, hay thiếu **nội dung trong bộ não của bạn**. AI rất dễ hiểu sang nghĩa thứ hai, rồi tự tạo và tự điền các trang trong `wiki/` — phá Luật sắt số 2, và nếu không có dữ liệu thật thì nó **bịa để lấp chỗ trống**.
+
+Thay khung bằng hai cách trên thì chắc chắn và kiểm được. AI chỉ nên dùng để **xác nhận sau khi thay**, không dùng để thay.
+
+### Kiểm sau khi cập nhật — 2 câu
+
+1. *"Phiên bản khung đang là bao nhiêu?"* → phải khớp số ở đầu `CLAUDE.md`
+2. Chạy `/kiem-chung` → bộ não vẫn trả lời đúng như trước là dữ liệu còn nguyên
 
 ---
 

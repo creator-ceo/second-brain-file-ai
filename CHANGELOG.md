@@ -4,6 +4,13 @@ Bộ khung này còn tiến hoá. Trang này ghi cái gì đổi và **vì sao**
 
 ---
 
+## v2.4 — 2026-08-14
+
+- **README: mục cập nhật viết lại cho cả người dùng zip.** Trước đó chỉ hướng dẫn `git pull`, bỏ quên nhóm cài bằng zip — vốn là nhóm đông hơn và ít rành kỹ thuật hơn. Nay có đủ hai đường, cộng phép kiểm 2 câu sau khi cập nhật.
+- **⛔ Cảnh báo: đừng nhờ AI "tự đọc bản mới rồi bổ sung phần còn thiếu".** Câu đó mơ hồ giữa *thiếu file khung* và *thiếu nội dung trong bộ não* — AI dễ hiểu sang nghĩa thứ hai rồi tự tạo và tự điền trang trong `wiki/`, phá Luật sắt số 2, và bịa nội dung để lấp chỗ trống. Thay khung thủ công thì chắc chắn và kiểm được; AI chỉ nên dùng để xác nhận sau khi thay.
+
+---
+
 ## v2.3 — 2026-08-11
 
 - **Thêm `AGENTS.md`** — Codex CLI đọc `AGENTS.md`, không đọc `CLAUDE.md`. Trước bản này, member dùng Codex clone về sẽ không được nạp luật nào cả, và không có cách nào nhận ra ngoài việc thấy AI trả lời như bình thường. `AGENTS.md` **trỏ về `CLAUDE.md` chứ không chép lại** — hai bản luật song song sẽ lệch nhau sau vài lần cập nhật.
