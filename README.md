@@ -35,10 +35,30 @@ Chưa quen `git` thì tải bản `.zip`, giải nén là dùng được ngay. �
 
 1. Mở công cụ AI **bậc 2** — Claude Cowork, Claude Code, hoặc AntiGravity.
    *(Chatbot thường như ChatGPT web không dùng được: nó không ghi file ra máy bạn, mà bộ não thứ 2 chính là các file trên máy bạn.)*
-2. Đặt thư mục này làm workspace — hoặc kéo cả thư mục vào cửa sổ công cụ.
+2. **Mở công cụ NGAY TRONG thư mục này** — xem mục dưới, đây là chỗ hay sai nhất.
 3. Nhắn: **`bắt đầu`**
 
 AI tự tạo `SecondBrain/` rồi phỏng vấn bạn từng câu.
+
+### ⚠️ Chỗ hay sai nhất — phải mở đúng thư mục
+
+`CLAUDE.md` và 4 lệnh `/banh-xe-cuoc-doi` `/nap-kho` `/kiem-chung` `/onboard` **chỉ được nạp khi thư mục này là gốc của phiên làm việc**. Clone về rồi vẫn ngồi ở thư mục cũ thì AI không thấy gì cả.
+
+**Dấu hiệu bạn đang sai chỗ:** nhắn *"bắt đầu"* mà AI trả lời như một AI bình thường — không hỏi về Bánh Xe Cuộc Đời, không tạo thư mục `SecondBrain/`, gõ `/` không thấy 4 lệnh trên. Bộ khung không hỏng, chỉ là chưa được nạp.
+
+**Claude Code:**
+```bash
+git clone https://github.com/creator-ceo/second-brain-file-ai.git
+cd second-brain-file-ai
+claude
+```
+Ba dòng, theo đúng thứ tự. Dòng `cd` là dòng quan trọng nhất — thiếu nó thì hai dòng kia vô nghĩa.
+
+*(Nếu bạn nhờ AI clone hộ: clone xong phải **thoát ra, `cd` vào thư mục vừa tạo, mở lại** ở đó. Clone trong cùng một phiên rồi nhắn tiếp thì phiên đó vẫn chưa nạp `CLAUDE.md`.)*
+
+**Claude Cowork / AntiGravity:** kéo cả thư mục `second-brain-file-ai` vào cửa sổ, hoặc chọn nó làm workspace — không chọn thư mục cha chứa nó.
+
+**Kiểm nhanh trước khi bắt đầu:** gõ `/` và tìm `/banh-xe-cuoc-doi`. Thấy nó là đúng chỗ. Không thấy thì bạn đang ở sai thư mục.
 
 📍 **Toàn bộ lộ trình 8 việc:** [BAT-DAU-TU-DAY.md](BAT-DAU-TU-DAY.md) — tick từng ô, vừa là bản đồ vừa là bằng chứng.
 

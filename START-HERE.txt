@@ -1,8 +1,12 @@
 SECOND BRAIN — bắt đầu thế nào (2 bước, 1 phút)
 
 1) Mở công cụ AI bậc 2 — Claude Cowork, Claude Code, hoặc AntiGravity.
-   Đặt FOLDER này làm workspace của bạn
-   — hoặc giải nén rồi kéo cả folder vào cửa sổ công cụ.
+   Đặt FOLDER NÀY làm workspace — hoặc kéo cả folder vào cửa sổ công cụ.
+
+   ⚠️ PHẢI mở công cụ NGAY TRONG folder này, không phải folder cha.
+      Claude Code:  cd second-brain-file-ai  rồi mới gõ  claude
+      Sai chỗ thì AI không nạp được luật, nhắn "bắt đầu" cũng không có gì xảy ra.
+      Kiểm nhanh: gõ  /  và tìm  /banh-xe-cuoc-doi  — thấy là đúng chỗ.
 
    (Chatbot thường như ChatGPT web KHÔNG dùng được — nó không ghi được
     file ra máy bạn, mà bộ não thứ 2 chính là các file trên máy bạn.
