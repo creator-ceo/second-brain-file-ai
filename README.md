@@ -4,7 +4,7 @@
 
 Ném thư mục này vào một công cụ AI bậc 2, nhắn *"bắt đầu"*, trả lời phỏng vấn — bạn có một bộ não thứ 2 chạy được thật trong 5–10 tiếng.
 
-> **Phiên bản:** `v2.2` · 2026-08-11 — xem [CHANGELOG.md](CHANGELOG.md)
+> **Phiên bản:** `v2.3` · 2026-08-11 — xem [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
@@ -33,7 +33,7 @@ Chưa quen `git` thì tải bản `.zip`, giải nén là dùng được ngay. �
 
 ## Bắt đầu
 
-1. Mở công cụ AI **bậc 2** — Claude Cowork, Claude Code, hoặc AntiGravity.
+1. Mở công cụ AI **bậc 2** — Claude Cowork, Claude Code, Codex CLI, hoặc AntiGravity.
    *(Chatbot thường như ChatGPT web không dùng được: nó không ghi file ra máy bạn, mà bộ não thứ 2 chính là các file trên máy bạn.)*
 2. **Mở công cụ NGAY TRONG thư mục này** — xem mục dưới, đây là chỗ hay sai nhất.
 3. Nhắn: **`bắt đầu`**
@@ -58,7 +58,21 @@ Ba dòng, theo đúng thứ tự. Dòng `cd` là dòng quan trọng nhất — t
 
 **Claude Cowork / AntiGravity:** kéo cả thư mục `second-brain-file-ai` vào cửa sổ, hoặc chọn nó làm workspace — không chọn thư mục cha chứa nó.
 
-**Kiểm nhanh trước khi bắt đầu:** gõ `/` và tìm `/banh-xe-cuoc-doi`. Thấy nó là đúng chỗ. Không thấy thì bạn đang ở sai thư mục.
+**Codex CLI:**
+```bash
+git clone https://github.com/creator-ceo/second-brain-file-ai.git
+cd second-brain-file-ai
+codex
+```
+Codex đọc [`AGENTS.md`](AGENTS.md) thay vì `CLAUDE.md` — file đó có sẵn trong bộ này và trỏ ngược về `CLAUDE.md`, nên nội dung y hệt.
+
+Khác biệt duy nhất: **Codex không có lệnh gạch chéo** cho 4 skill, vì nó tìm skill ở `.codex/skills/` còn bộ này để ở `.claude/skills/`. Thay vào đó bạn gọi **bằng lời**: *"làm bánh xe cuộc đời"*, *"lưu cái này vào não"*, *"kiểm chứng bộ não"*. `AGENTS.md` đã dặn sẵn AI mở đúng file khi nghe những câu đó. *(Muốn có lệnh `/` thì xem mục cuối `AGENTS.md`.)*
+
+**Kiểm nhanh trước khi bắt đầu:**
+- Claude Code / Cowork: gõ `/` và tìm `/banh-xe-cuoc-doi`. Thấy là đúng chỗ.
+- Codex: hỏi *"bạn đang đọc luật từ file nào?"* — trả lời có `AGENTS.md` hoặc `CLAUDE.md` là đúng chỗ.
+
+Không thấy gì thì bạn đang ở sai thư mục — đừng nhắn tiếp, thoát ra `cd` vào rồi mở lại.
 
 📍 **Toàn bộ lộ trình 8 việc:** [BAT-DAU-TU-DAY.md](BAT-DAU-TU-DAY.md) — tick từng ô, vừa là bản đồ vừa là bằng chứng.
 
@@ -95,7 +109,8 @@ Khung này đã được thiết kế sẵn — bạn **không cần tự nghĩ 
 ## Trong này có gì
 
 ```
-CLAUDE.md                    luật vận hành — AI tự đọc mỗi phiên
+CLAUDE.md                    luật vận hành — Claude Code/Cowork tự đọc mỗi phiên
+AGENTS.md                    bản cho Codex CLI — trỏ về CLAUDE.md, không lặp nội dung
 BAT-DAU-TU-DAY.md            checklist 8 việc
 START-HERE.txt               hướng dẫn 1 phút
 

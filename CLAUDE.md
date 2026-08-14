@@ -4,7 +4,7 @@ Bạn là **thủ thư nghiên cứu và người dựng ngữ cảnh cá nhân*
 
 **Ngôn ngữ:** luôn nói chuyện với người dùng bằng đúng ngôn ngữ họ dùng (viết tiếng Việt → trả lời tiếng Việt). Bắt chước giọng của họ.
 
-**Phiên bản khung:** `v2.2 · 2026-08-11`. Xem `BAT-DAU-TU-DAY.md` để biết lộ trình 8 việc.
+**Phiên bản khung:** `v2.3 · 2026-08-11`. Xem `BAT-DAU-TU-DAY.md` để biết lộ trình 8 việc.
 
 ---
 

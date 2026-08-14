@@ -4,6 +4,14 @@ Bộ khung này còn tiến hoá. Trang này ghi cái gì đổi và **vì sao**
 
 ---
 
+## v2.3 — 2026-08-11
+
+- **Thêm `AGENTS.md`** — Codex CLI đọc `AGENTS.md`, không đọc `CLAUDE.md`. Trước bản này, member dùng Codex clone về sẽ không được nạp luật nào cả, và không có cách nào nhận ra ngoài việc thấy AI trả lời như bình thường. `AGENTS.md` **trỏ về `CLAUDE.md` chứ không chép lại** — hai bản luật song song sẽ lệch nhau sau vài lần cập nhật.
+- **Bảng kích hoạt 4 skill bằng lời nói.** Codex tìm skill ở `.codex/skills/`, bộ này để ở `.claude/skills/`, nên Codex không có lệnh gạch chéo. `AGENTS.md` dặn AI mở đúng file khi nghe *"làm bánh xe cuộc đời"*, *"lưu vào não"*, *"kiểm chứng"*... Với người không quen gõ lệnh thì cách này còn dễ hơn.
+- **README: cảnh báo chỗ hay sai nhất — mở công cụ đúng thư mục.** `CLAUDE.md` và 4 skill chỉ được nạp khi thư mục này là gốc của phiên. Clone về rồi vẫn ngồi ở thư mục cũ thì nhắn *"bắt đầu"* không có gì xảy ra, và trông y hệt như bộ khung hỏng. Thêm dấu hiệu nhận biết + phép kiểm nhanh.
+
+---
+
 ## v2.2 — 2026-08-11
 
 Sửa 5 lỗi tìm ra khi **chạy thử trọn lộ trình 8 việc trên một bản clone sạch** — đóng vai member từ đầu tới cuối.
